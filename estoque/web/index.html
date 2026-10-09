@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="aurora" aria-hidden="true"></div>
+
+    <main class="app">
+      <header class="topo">
+        <div>
+          <p class="eyebrow">Depósito</p>
+          <h1>Controle de Estoque</h1>
+        </div>
+        <button id="recarregar" class="btn-ghost" title="Reiniciar do arquivo">
+          <span class="dot"></span> Reiniciar
+        </button>
+      </header>
+
+      <section class="grid">
+        <!-- Formulário de movimentação -->
+        <div class="card form">
+          <div class="card-head"><h2>Nova movimentação</h2></div>
+
+          <label class="campo">
+            <span>Produto</span>
+            <select id="produto"></select>
+          </label>
+
+          <div class="campo">
+            <span>Tipo</span>
+            <div class="toggle" id="tipo">
+              <button type="button" class="t-entrada ativo" data-tipo="entrada">↓ Entrada</button>
+              <button type="button" class="t-saida" data-tipo="saida">↑ Saída</button>
+            </div>
+          </div>
+
+          <label class="campo">
+            <span>Quantidade</span>
+            <input id="quantidade" type="number" min="1" step="1" value="1" />
+          </label>
+
+          <label class="campo">
+            <span>Descrição</span>
+            <input id="descricao" type="text" placeholder="ex.: Compra fornecedor, Venda balcão…" />
+          </label>
+
+          <button id="lancar" class="btn-primario">Lançar movimentação</button>
+          <div id="feedback" class="feedback"></div>
+        </div>
+
+        <!-- Produtos -->
+        <div class="card produtos">
+          <div class="card-head">
+            <h2>Produtos</h2>
+            <span class="legenda">estoque atual</span>
+          </div>
+          <div id="produtos" class="produtos-grid"></div>
+        </div>
+      </section>
+
+      <!-- Histórico -->
+      <section class="card historico">
+        <div class="card-head">
+          <h2>Histórico de movimentações</h2>
+          <span class="legenda" id="contador"></span>
+        </div>
+        <div class="tabela-wrap">
+          <table class="tabela">
+            <thead>
+              <tr>
+                <th>#</th><th>Data/hora</th><th class="l">Produto</th>
+                <th>Tipo</th><th>Qtd</th><th class="l">Descrição</th><th>Estoque</th>
+              </tr>
+            </thead>
+            <tbody id="historico"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer class="rodape"><span id="status">Carregando…</span></footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

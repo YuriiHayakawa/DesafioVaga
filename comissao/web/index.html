@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Comissões — Time Comercial</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="aurora" aria-hidden="true"></div>
+
+    <main class="app">
+      <header class="topo">
+        <div>
+          <p class="eyebrow">Time Comercial</p>
+          <h1>Painel de Comissões</h1>
+        </div>
+        <button id="recarregar" class="btn-ghost" title="Recarregar dados">
+          <span class="dot"></span> Atualizar
+        </button>
+      </header>
+
+      <section id="kpis" class="kpis"><!-- KPIs via JS --></section>
+
+      <section class="grid">
+        <div class="card ranking">
+          <div class="card-head">
+            <h2>Comissão por vendedor</h2>
+            <span class="legenda">ordenado por comissão</span>
+          </div>
+          <div id="ranking" class="barras"><!-- barras via JS --></div>
+        </div>
+
+        <aside class="card regras">
+          <div class="card-head"><h2>Regras aplicadas</h2></div>
+          <ul id="faixas" class="faixas"><!-- faixas via JS --></ul>
+        </aside>
+      </section>
+
+      <section class="card detalhes">
+        <div class="card-head">
+          <h2>Detalhamento</h2>
+          <span class="legenda">clique em um vendedor para ver as vendas</span>
+        </div>
+        <div id="vendedores" class="vendedores"><!-- cards via JS --></div>
+      </section>
+
+      <footer class="rodape">
+        <span id="status">Carregando…</span>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

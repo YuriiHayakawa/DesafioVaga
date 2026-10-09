@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Juros por Atraso</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="aurora" aria-hidden="true"></div>
+
+    <main class="app">
+      <header class="topo">
+        <div>
+          <p class="eyebrow">Financeiro</p>
+          <h1>Juros por Atraso</h1>
+        </div>
+        <span class="hoje" id="hoje"></span>
+      </header>
+
+      <section class="grid">
+        <!-- Formulário -->
+        <div class="card form">
+          <div class="card-head"><h2>Dados do título</h2></div>
+
+          <label class="campo">
+            <span>Valor (R$)</span>
+            <input id="valor" type="number" min="0.01" step="0.01" placeholder="0,00" />
+          </label>
+
+          <label class="campo">
+            <span>Data de vencimento</span>
+            <input id="vencimento" type="date" />
+          </label>
+
+          <p class="regra" id="regra">Multa de 2,5% ao dia sobre o valor.</p>
+
+          <button id="calcular" class="btn-primario">Calcular juros</button>
+          <div id="erro" class="erro-box"></div>
+        </div>
+
+        <!-- Resultado -->
+        <div class="card resultado" id="resultado-card">
+          <div class="card-head"><h2>Resultado</h2><span class="legenda" id="situacao"></span></div>
+          <div id="resultado" class="resultado-vazio">
+            Preencha os dados e clique em <strong>Calcular juros</strong>.
+          </div>
+        </div>
+      </section>
+
+      <footer class="rodape"><span id="status">Pronto.</span></footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

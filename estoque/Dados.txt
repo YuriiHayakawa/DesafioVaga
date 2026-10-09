@@ -1,0 +1,31 @@
+{
+&quot;estoque&quot;:
+[
+{
+&quot;codigoProduto&quot;: 101,
+&quot;descricaoProduto&quot;: &quot;Caneta Azul&quot;,
+&quot;estoque&quot;: 150
+
+},
+{
+&quot;codigoProduto&quot;: 102,
+&quot;descricaoProduto&quot;: &quot;Caderno Universitário&quot;,
+&quot;estoque&quot;: 75
+},
+{
+&quot;codigoProduto&quot;: 103,
+&quot;descricaoProduto&quot;: &quot;Borracha Branca&quot;,
+&quot;estoque&quot;: 200
+},
+{
+&quot;codigoProduto&quot;: 104,
+&quot;descricaoProduto&quot;: &quot;Lápis Preto HB&quot;,
+&quot;estoque&quot;: 320
+},
+{
+&quot;codigoProduto&quot;: 105,
+&quot;descricaoProduto&quot;: &quot;Marcador de Texto Amarelo&quot;,
+&quot;estoque&quot;: 90
+}
+]
+}
